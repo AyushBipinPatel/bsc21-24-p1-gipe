@@ -26,7 +26,7 @@ data_26[,-c(1,69)]|>
   pivot_wider(names_from = `Indicator Name`,
               values_from = val)|>
   janitor::clean_names() |>
-  mutate(
+  dplyr::mutate(
     year = as.numeric(year)
   )-> data_26
 
