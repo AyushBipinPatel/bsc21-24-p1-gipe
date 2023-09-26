@@ -1,0 +1,97 @@
+---
+title: "Periodical 1 AAR"
+author: "ENTER YOU NAME AND ROLL (LAST Three digits)"
+format: html
+---
+
+## Instructions
+
+  - Add you name and roll number in the line 3 of YAML header. Only enter last 3 digits of roll number.
+  - You exam will be considered compelte and submitted only if I receive this file, on which you have worked, vis email before 5:10pm.
+  - Work in this same file.
+  
+## Run the following code chunk:
+
+```{r getdata}
+
+source("https://raw.githubusercontent.com/AyushBipinPatel/bsc21-24-p1-gipe/master/create-data-26th.R")
+
+library(tidyverse)
+# feel free to  add more libraries as you need
+# here in this chunk
+
+```
+
+## Your data
+
+> Run th code chunk below to inspect the data you will be working on
+
+```{r}
+View(data_26)
+names(data_26) # available variables
+```
+
+## Question 1 (2 marks)
+
+>Write and execute code that will provide the total number of missing values in the column `urban_population_growth_annual_percent` in the data_26
+
+```{r}
+
+```
+
+## Quesiton 2 (2 marks)
+
+> Write and execute code that will only keep observations realted to India and Ecuador, and only after the year 2000
+
+```{r}
+
+```
+
+
+## Question 3 (3 mark)
+
+> In the `data_26`, there are two columns `labor_force_female_percent_of_total_labor_force` and `labor_force_total`. Use this two columns to create a new column that will record the number of males in labour force. Name this new column `labour_force_male_total`.
+
+```{r}
+data_26|>
+  dplyr::filter(country_name != "World")|>
+  ggplot2::ggplot(ggplot2::aes(arable_land_hectares_per_person,agricultural_land_sq_km))
+```
+
+## Question 4 (7 marks)
+
+> Create a line chart between variable `arable_land_hectares_per_person` for India and China. Each country should be represented by a line. Colour of line should be linked to country. Add a title, caption, axes labels and theme of your choice to the plot.
+
+```{r}
+
+```
+
+## Question 5 (4 marks)
+
+> Write a code that will create a table where the minimum value for `access_to_electricity_percent_of_population` variable across all the years is recorded for every country. Arrange the table in descending order of the minimum value. 
+
+```{r}
+
+```
+
+## Question 6 (4 marks)
+
+> Write code that will change the data from wide format to long format. Do this in such a way that the columns of the final data should be :
+
+[1] "country_name"                                                                      
+[2] "country_code"                                                                      
+[3] "year"
+
+[4] "indicator_name"
+
+[5] "value"
+
+
+## Question 7 (3 marks)
+
+> Write code that will create a table where mean as well as the median `electric_power_consumption_k_wh_per_capita` for each country is recorded.
+
+```{r}
+
+```
+
