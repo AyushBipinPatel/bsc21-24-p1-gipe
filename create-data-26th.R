@@ -16,15 +16,19 @@ data_26 <- readr::read_csv("https://raw.githubusercontent.com/AyushBipinPatel/bs
 # get in right shape ------------------------------------------------------
 
 
-data_26[,-c(1,69)]|>
+data_26[,-c(1,69)]|> 
   pivot_longer(
     cols = 5:67,
     names_to = "year",
     values_to = "val"
-  )|>
+  )|> 
+  select(-`Indicator Code`)|>
   pivot_wider(names_from = `Indicator Name`,
               values_from = val)|>
-  janitor::clean_names() -> data_26
+  janitor::clean_names() |>
+  mutate(
+    year = as.numeric(year)
+  )-> data_26
 
 
 
