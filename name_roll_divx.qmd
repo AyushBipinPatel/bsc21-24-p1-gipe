@@ -14,6 +14,8 @@ format: html
 
 ```{r getdata}
 
+install.packages("janitor") # only if not installed
+
 source("https://raw.githubusercontent.com/AyushBipinPatel/bsc21-24-p1-gipe/master/create-data-26th.R")
 
 library(tidyverse)
