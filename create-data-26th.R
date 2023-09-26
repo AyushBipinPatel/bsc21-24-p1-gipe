@@ -9,7 +9,7 @@
 
 # read data ---------------------------------------------------------------
 
-data_26 <- readr::read_csv("")
+data_26 <- readr::read_csv("https://raw.githubusercontent.com/AyushBipinPatel/bsc21-24-p1-gipe/master/data/data_for_early_exam.csv")
 
 
 
