@@ -3,10 +3,6 @@
 
 
 
-
-# libs --------------------------------------------------------------------
-
-
 # read data ---------------------------------------------------------------
 
 data_26 <- readr::read_csv("https://raw.githubusercontent.com/AyushBipinPatel/bsc21-24-p1-gipe/master/data/data_for_early_exam.csv")
@@ -17,13 +13,13 @@ data_26 <- readr::read_csv("https://raw.githubusercontent.com/AyushBipinPatel/bs
 
 
 data_26[,-c(1,69)]|> 
-  pivot_longer(
+  tidyr::pivot_longer(
     cols = 5:67,
     names_to = "year",
     values_to = "val"
   )|> 
-  select(-`Indicator Code`)|>
-  pivot_wider(names_from = `Indicator Name`,
+  dplyr::select(-`Indicator Code`)|>
+  tidyr::pivot_wider(names_from = `Indicator Name`,
               values_from = val)|>
   janitor::clean_names() |>
   dplyr::mutate(
