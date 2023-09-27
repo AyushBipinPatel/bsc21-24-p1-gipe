@@ -7,7 +7,7 @@ format: html
 ## Instructions
 
   - Add you name and roll number in the line 3 of YAML header. Only enter last 3 digits of roll number.
-  - You exam will be considered compelte and submitted only if I receive this file, on which you have worked, vis email before 5:10pm.
+  - You exam will be considered complete and submitted only if I receive this file, on which you have worked, vis email before 5:10pm.
   - Work in this same file.
   
 ## Run the following code chunk:
