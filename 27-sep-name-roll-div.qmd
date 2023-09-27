@@ -1,0 +1,103 @@
+---
+title: "Periodical 1 AAR"
+author: "ENTER YOU NAME AND ROLL (LAST Three digits)"
+format: html
+---
+
+## Instructions
+
+  - Add you name and roll number in the line 3 of YAML header. Only enter last 3 digits of roll number.
+  - You exam will be considered complete and submitted only if I receive this file, on which you have worked, via email before 3:10pm.
+  - Work in this same file.
+  
+## Run the following code chunk:
+
+```{r getdata}
+
+### Execute only once ###
+
+read.csv("https://raw.githubusercontent.com/AyushBipinPatel/bsc21-24-p1-gipe/master/data/27.csv",
+         sep= "|") ->data_27
+
+library(tidyverse)
+# feel free to add more libraries as you need
+# here in this chunk
+
+```
+
+## Your data
+
+> Run th code chunk below to inspect the data you will be working on
+
+```{r}
+View(data_27)
+names(data_27) # available variables
+```
+
+## Question 1 (2 marks)
+
+> Write and execute a code that will return the total number of parliamentary constituencies. Use the variable `pc_code`.
+
+```{r}
+
+```
+
+## Quesiton 2 (2 marks)
+
+> Write a code that will return observations/rows only from District `NANDURBAR` and where total number of anemic pregnant women (`total_anemic_pregnant_women`) are greater than 5.
+
+```{r}
+
+```
+
+
+## Question 3 (3 mark)
+
+> Write a code that will create a new column in that data_27. Name the new column `perc_hh_farm_act`. Use existing columns `total_hhd` and `total_hhd_engaged_in_farm_activities` to calculate values for the new column (percentage households engaged in farm activity).
+
+```{r}
+
+```
+
+## Question 4 (7 marks)
+
+> Write a code that will create a scatter plot using observations from districts `NASHIK` and `LATUR`. The plot should use variables `net_sown_area_in_hac` and `area_irrigated_in_hac`. Link the points in the chart with the district using colour. Provide appropriate title, axes labels, caption, and use a theme of your choice.
+
+```{r}
+
+```
+
+## Question 5 (4 marks)
+
+> Write code that will create a table which shows the average distance of a vilalge from an anganwadi center for each district. Use the variable `distance_of_aanganwadi_centre`. Arrange this table in ascending order.
+
+```{r}
+
+```
+
+## Question 6 (4 marks)
+
+> Run the peice of code given to you in the chunk below.
+
+```{r}
+data_27|>
+  dplyr::select(village_name,
+            dplyr::contains("distance"))->data_q6
+```
+
+> Use `data_q6`, change it from wide to long format such that it has below mentioned columns (every column, except village name, becomes an indicator and its respective value is recorded in column value):
+
+[1] village_name
+
+[2] indicator
+
+[3] value
+
+## Question 7 (3 marks)
+
+> Write a code that will generate a table which records, for each district, the median of distance from nearest empaneled hospital(`distance_of_nearest_empaneled_hospital`) to a village and mean of distance to banks for a vilalge (`distance_of_banks`).
+
+```{r}
+
+```
+
